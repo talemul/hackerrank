@@ -33,14 +33,14 @@ function timeConversion(s) {
     // Write your code here
     var time='';
     if(s[8]=='A'){
-       if(parseInt(s[0])==2&&parseInt(s[2])==2){
+       if(parseInt(s[0])==1&&parseInt(s[1])==2){
           time='00';  
         }else{
           time=s[0]+''+s[1];   
         }
      
     }else{
-         if(parseInt(s[0])==2&&parseInt(s[2])==2){
+         if(parseInt(s[0])==1&&parseInt(s[1])==2){
           time='12';  
         }else{            
           time=(parseInt(s[0]+s[1])+12);   
