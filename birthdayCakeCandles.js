@@ -31,18 +31,20 @@ function readLine() {
 
 function birthdayCakeCandles(candles) {
     // Write your code here
-    var max=0,count=1;
+    var max=0,count=0;
     for(var i=0; i<candles.length;i++){
-          if(max==candles[i]){
-            count++;
-        }
+         
         if(max<candles[i]){
             max=candles[i];
         }      
     }
     
- return count;   
-
+       for(var i=0; i<candles.length;i++){
+           if(max==candles[i]){
+            count++;
+        } 
+       }
+ return count;  
 }
 
 function main() {
