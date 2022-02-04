@@ -1,1 +1,9 @@
-Select * from CITY where CountryCode='USA' and population>100000
+Select * from CITY where CountryCode='USA' and population>100000;
+Select name from CITY where CountryCode='USA' and population>120000;
+
+Select name from CITY ;
+Select * from CITY where ID=1661;
+Select * from CITY where COUNTRYCODE='JPN';
+Select NAME from CITY where COUNTRYCODE='JPN';
+SELECT CITY, STATE FROM STATION;
+SELECT CITY FROM STATION where ID % 2=0 group by CITY;
