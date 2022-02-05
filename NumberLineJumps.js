@@ -50,7 +50,13 @@ while(1){
      if(d1<d2&&v1<v2){
         break;        
     }
-    
+    if(v1==v2&&d1!=d2){
+        break;
+    }
+   if(x1>10000||x2>10000||v1>10000||v2>10000||v1==0||v2==0){
+       break;
+   } 
+  
 }
 return returnString;
 }
