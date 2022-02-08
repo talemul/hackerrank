@@ -12,3 +12,9 @@ select * from ((select N,'Inner' from BST where N in (select DISTINCT  P from BS
 
 select concat(Name,'(',SUBSTR(OCCUPATION,1,1),')') from OCCUPATIONS order by Name;
 select concat('There are a total of ',count(*),' ',LOWER(occupation),'s.') from OCCUPATIONS group by OCCUPATION order by count(*),OCCUPATION;
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+Select roll_number,name  from student_information inner join
+faculty_information on advisor=employee_ID where (gender='M' and salary>15000) or  (gender='F' and salary>20000)
