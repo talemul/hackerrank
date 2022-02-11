@@ -95,3 +95,5 @@ WHERE NOT EXISTS (
         
         select CITY,LENGTH(CITY) from STATION where LENGTH(CITY)= (select min(LENGTH(CITY)) from STATION) order by CITY limit 1;
 select CITY,LENGTH(CITY) from STATION where LENGTH(CITY)= (select max(LENGTH(CITY)) from STATION) order by CITY limit 1;
+select CITY from STATION where CITY like 'a%' or CITY like 'e%' or CITY like 'i%' or CITY like 'o%' or CITY like 'u%' group by CITY;
+
