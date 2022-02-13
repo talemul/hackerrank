@@ -97,3 +97,14 @@ WHERE NOT EXISTS (
 select CITY,LENGTH(CITY) from STATION where LENGTH(CITY)= (select max(LENGTH(CITY)) from STATION) order by CITY limit 1;
 select CITY from STATION where CITY like 'a%' or CITY like 'e%' or CITY like 'i%' or CITY like 'o%' or CITY like 'u%' group by CITY;
 
+select sku, product_name from product where 
+id not in(select product_id from INVOICE_ITEM) order by sku;
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+SELECT c.customer_name,FORMAT(i.total_price,6)  FROM customer c INNER JOIN invoice i ON
+c.id=i.customer_id
+WHERE i.total_price<=(SELECT (AVG(total_price)/100)*25 FROM invoice) order by i.total_price desc;
+ 
+
