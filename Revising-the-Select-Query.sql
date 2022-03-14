@@ -106,5 +106,7 @@ Please append a semicolon ";" at the end of the query
 SELECT c.customer_name,FORMAT(i.total_price,6)  FROM customer c INNER JOIN invoice i ON
 c.id=i.customer_id
 WHERE i.total_price<=(SELECT (AVG(total_price)/100)*25 FROM invoice) order by i.total_price desc;
+ /*Top Earners*/
+ select months*salary, count(*) from Employee where months*salary=(select max(months*salary) from Employee) group by months*salary
  
 
